@@ -11,7 +11,7 @@ function RightSide() {
 
         <FeedList>
           <li>
-            <a>
+            <a href="/home">
               <Avatar />
             </a>
             <div>
@@ -20,7 +20,7 @@ function RightSide() {
             </div>
           </li>
           <li>
-            <a>
+            <a href="/home">
               <Avatar />
             </a>
             <div>
