@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { auth, onAuthStateChanged } from "./firebase";
 
 import { setUser } from "./redux/actions";
@@ -10,7 +10,6 @@ import PrivateRoute from "./PrivateRoute";
 
 function App() {
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.userAuth);
 
   useEffect(() => {
     onAuthStateChanged(auth, (userInfo) => {

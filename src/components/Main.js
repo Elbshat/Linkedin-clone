@@ -1,9 +1,9 @@
-import { useState, Fragment, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ReactPlayer from "react-player/lazy";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { setArticles } from "../redux/actions";
-import { getArticles } from "../services/firebaseServices";
+
 import PostModal from "./PostModal";
 
 const Main = () => {
@@ -61,7 +61,7 @@ const Main = () => {
           articles.map((article, i) => (
             <Article key={i}>
               <SharedActor>
-                <a>
+                <a href="/">
                   <img src={article.actor.image} alt="user" />
                   <div>
                     <span>{article.actor.title}</span>
@@ -80,7 +80,7 @@ const Main = () => {
               </SharedActor>
               <Description>{article.description}</Description>
               <SharedImg>
-                <a>
+                <a href="/">
                   {article.sharedImg && (
                     <img src={article.sharedImg} alt="shared" />
                   )}
@@ -99,7 +99,7 @@ const Main = () => {
                   </button>
                 </li>
                 <li>
-                  <a>{`${article.comments} comment`} </a>
+                  <a href="/">{`${article.comments} comment`} </a>
                 </li>
               </SocialCounts>
               <SocialActions>

@@ -1,11 +1,4 @@
-import {
-  collection,
-  getDoc,
-  getDocs,
-  onSnapshot,
-  orderBy,
-  query,
-} from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../../firebase";
 import { SET_ARTICLES, SET_LOADING_STATUS, SET_USER } from "./actionType";
 
